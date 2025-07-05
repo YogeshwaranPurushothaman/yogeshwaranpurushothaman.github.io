@@ -376,7 +376,6 @@
   document.addEventListener("DOMContentLoaded", () => {
     AOS.init();
 
-    // Typing effect for tagline
     const taglineText = "Data Scientist | Python Enthusiast | Engineer by Foundation, Analyst by Passion";
     const taglineElement = document.querySelector('.tagline');
     let charIndex = 0;
@@ -390,12 +389,20 @@
     }
     typeTagline();
 
-    // Mobile nav menu toggle
+    // Hamburger toggle functionality
     const menuToggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector(".main-nav");
 
     menuToggle.addEventListener("click", () => {
       nav.classList.toggle("open");
+    });
+
+    // Auto-close menu on link click (especially for mobile)
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+      });
     });
   });
 </script>
