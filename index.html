@@ -3,25 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
+  <title>Yogeshwaran P | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta name="theme-color" content="#2a5298" />
   <style>
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background-color: #f5f5f5;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
       color: #333;
-      transition: all 0.3s ease;
     }
+
     header {
-      background: #333;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
       color: #fff;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      font-weight: 500;
+      font-style: italic;
+      color: #f0e68c;
+      margin-top: 0.8rem;
+      min-height: 1.4em;
+    }
+
     nav ul {
       display: flex;
       justify-content: center;
@@ -30,61 +46,77 @@
       margin: 0;
       list-style: none;
     }
+
     nav li {
       margin: 0 15px;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
       padding: 1rem;
       display: block;
     }
+
     nav a:hover {
       background: #666;
     }
+
     section {
       max-width: 900px;
       margin: 2rem auto;
       padding: 1rem;
-      background: #fff;
-      border-radius: 8px;
-      transition: background 0.3s ease;
+      background: #ffffffc5;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
-    .project {
+
+    h2 {
+      color: #2a5298;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1.5rem;
       margin-bottom: 1.5rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
+
+    .project-card:hover {
+      transform: scale(1.02);
+      border-color: #2a5298;
+    }
+
+    .project-card h3 {
+      color: #2a5298;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-card p,
+    .project-card ul {
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .project-card ul {
+      padding-left: 1.2rem;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #777;
-    }
-    .dark-mode {
-      background-color: #121212;
-      color: #f5f5f5;
-    }
-    .dark-mode section {
-      background-color: #1e1e1e;
-    }
-    .dark-mode a {
-      color: #90caf9;
-    }
-    .toggle-btn {
-      display: block;
-      margin: 1rem auto;
-      padding: 0.5rem 1rem;
-      background: #333;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Your Name</h1>
-    <p>Web Developer | Designer | Creator</p>
+    <h1>Yogeshwaran P</h1>
+    <p class="tagline"></p>
   </header>
 
   <nav>
@@ -95,37 +127,84 @@
     </ul>
   </nav>
 
-  <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">Toggle Dark Mode</button>
-
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>Hello! I'm a passionate developer with experience in building responsive websites and user-friendly interfaces. I enjoy solving real-world problems through code.</p>
+    <p>Hi! I'm <strong>Yogeshwaran P</strong>, a passionate and adaptive data scientist with a foundation in civil engineering and a curious mind that thrives on problem-solving. After earning my Bachelor's in Civil Engineering (2014–2018), I pivoted into the world of technology, where I now blend analytical rigor with creative insight to derive meaningful outcomes from data.</p>
+    <p>I completed a comprehensive Data Science program at <strong>GUVI</strong>, where I sharpened my expertise in:</p>
+    <ul>
+      <li><strong>Programming & Analysis:</strong> Python, Pandas, NumPy, Matplotlib, Seaborn, Selenium</li>
+      <li><strong>Business Intelligence Tools:</strong> Power BI, Tableau</li>
+      <li><strong>App Development:</strong> Streamlit</li>
+      <li><strong>ML & AI:</strong> Machine Learning models, Deep Learning, YOLO object detection, Sentiment Analysis</li>
+    </ul>
+    <p>I’ve successfully completed <strong>5 machine learning projects</strong>, ranging from classification models to deep neural networks and computer vision tasks.</p>
+    <p>Since 2022, I’ve also gained hands-on professional experience working with <strong>Salesforce CRM</strong>, <strong>MS Office tools</strong>, and developing <strong>VBA automation</strong>.</p>
+    <p>I'm always eager to learn, innovate, and bring value through data-driven solutions. 🚀</p>
   </section>
 
   <section id="projects" data-aos="fade-left">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Project One</h3>
-      <p>Description of your project with technologies used and your contributions.</p>
+
+    <div class="project-card" data-aos="zoom-in">
+      <h3>Redbus Data Scraping & Streamlit App</h3>
+      <p>Automated travel data extraction from Redbus using Selenium and presented it via Streamlit for smarter transportation insights.</p>
     </div>
-    <div class="project">
-      <h3>Project Two</h3>
-      <p>Another example with links to your live project or GitHub repo.</p>
+
+    <div class="project-card" data-aos="zoom-in">
+      <h3>EDA for Global Electronics</h3>
+      <p>Performed deep analysis of customer and sales data to unlock insights and propose actionable business strategies.</p>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in">
+      <h3>Used Car Price Prediction – Car Dheko</h3>
+      <p>Built an ML-powered pricing engine with Streamlit for real-time used car valuations based on critical features.</p>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in">
+      <h3>Cybersecurity Triage Classifier – Microsoft</h3>
+      <p>Developed a classification model to streamline security incident triage and boost SOC analyst efficiency.</p>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in">
+      <h3>Dominos Sales Forecast & Inventory Optimizer</h3>
+      <p>Forecasted sales using historical data to automate ingredient ordering and reduce inventory waste.</p>
+    </div>
+
+    <div class="project-card" data-aos="zoom-in">
+      <h3>Banking Data Intelligence Suite</h3>
+      <ul>
+        <li><strong>Loan Default Prediction</strong> — Supervised learning to flag high-risk applications.</li>
+        <li><strong>Customer Segmentation</strong> — Cluster-based profiling via unsupervised learning.</li>
+        <li><strong>Product Recommendation</strong> — Personalized suggestions using recommender systems.</li>
+      </ul>
     </div>
   </section>
 
   <section id="contact" data-aos="fade-right">
     <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-    <p>GitHub: <a href="#">github.com/yourusername</a></p>
+    <p>Email: yogeshwaran.p1997@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yogeshwaran-purushothaman-b8598a173">linkedin.com/in/YogeshwaranPurushothaman</a></p>
+    <p>GitHub: <a href="https://github.com/YogeshwaranPurushothaman">github.com/YogeshwaranPurushothaman</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Your Name. All rights reserved.
+    &copy; 2025 Yogeshwaran P. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+    const taglineText = "Data Scientist | Python Enthusiast | Engineer by Foundation, Analyst by Passion";
+    const taglineElement = document.querySelector('.tagline');
+    let charIndex = 0;
+    function typeTagline() {
+      if (charIndex < taglineText.length) {
+        taglineElement.innerHTML += taglineText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeTagline, 40);
+      }
+    }
+    typeTagline();
+  </script>
 </body>
 </html>
