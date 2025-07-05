@@ -372,11 +372,15 @@
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
     AOS.init();
+
+    // Typing effect for tagline
     const taglineText = "Data Scientist | Python Enthusiast | Engineer by Foundation, Analyst by Passion";
     const taglineElement = document.querySelector('.tagline');
     let charIndex = 0;
+
     function typeTagline() {
       if (charIndex < taglineText.length) {
         taglineElement.innerHTML += taglineText.charAt(charIndex);
@@ -385,15 +389,15 @@
       }
     }
     typeTagline();
-    document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const nav = document.querySelector(".main-nav");
 
-        menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("open");
-        });
+    // Mobile nav menu toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".main-nav");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
     });
-
-  </script>
+  });
+</script>
 </body>
 </html>
