@@ -42,12 +42,21 @@
 
     nav ul {
       display: flex;
+      width: 100vw;
+      max-width: 100%;
       justify-content: center;
-      background: #444;
+      background: #5f5f799d;
       padding: 0;
       margin: 0;
       list-style: none;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
+
+
+html, body {
+  overflow-x: hidden;
+}
 
     nav li {
       margin: 0 15px;
@@ -61,11 +70,11 @@
     }
 
     nav a:hover {
-      background: #666;
+      background: #3e59e4;
     }
 
     section {
-      max-width: 900px;
+      max-width: 100%;
       margin: 2rem auto;
       padding: 1rem;
       background: #ffffffc5;
@@ -129,9 +138,7 @@
     transition: transform 0.3s ease;
     }
 
-    .cert-card:hover {
-    transform: translateY(-4px);
-    }
+
     @media (max-width: 600px) {
     header {
         padding: 2rem 1rem;
@@ -160,6 +167,7 @@
         font-size: 1rem;
     }
     }
+    
     .menu-toggle {
     display: none;
     font-size: 2rem;
@@ -172,6 +180,43 @@
     z-index: 1000;
     cursor: pointer;
     }
+    
+ 
+    .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Enhanced shadow for contrast */
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    text-decoration: none;
+    color: #2a5298;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 6px;
+  }
+
+  .nav-links li a:hover {
+    background-color: #2a5298;
+    color: #fff;
+  }
+
 
     /* Responsive nav for mobile */
     @media (max-width: 768px) {
@@ -181,7 +226,7 @@
 
     .main-nav .nav-links {
         flex-direction: column;
-        background-color: #2a5298;
+        background-color: #e2e5ea;
         position: absolute;
         width: 100%;
         left: 0;
@@ -278,6 +323,245 @@
     margin-right: 8px;
     }
 
+
+    .cert-card h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #2a5298;
+    }
+
+    .cert-card p {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    }
+
+    .cert-btn {
+    display: inline-block;
+    background-color: #2a5298;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .cert-btn:hover {
+    background-color: #1e3c72;
+    transform: translateY(-2px);
+    }
+    #certificates {
+  padding: 2rem 1rem;
+  background-color: #f4f7fa;
+  font-family: 'Segoe UI', sans-serif;
+    }
+
+    #certificates h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2a5298;
+    margin-bottom: 1.5rem;
+    }
+
+    #projects h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2a5298;
+    margin-bottom: 1.5rem;
+    }
+    #about h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2a5298;
+    margin-bottom: 1.5rem;
+    }
+    #contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2a5298;
+    margin-bottom: 1.5rem;
+    }
+    #certificates h3 {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #2a5298;
+    }
+
+    .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    }
+
+
+    .cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .cert-card h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    color: #2a5298;
+    }
+
+    .cert-card p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 1rem;
+    }
+
+    .github-link {
+    display: inline-block;
+    background-color: #2a5298;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .github-link:hover {
+    background-color: #1e3c72;
+    transform: translateY(-2px);
+    }
+    body {
+      padding-top: 80px; /* Adjust based on nav height */
+    }
+    
+    .contact-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #f1f3f5;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: scale(1.03);
+}
+
+.contact-item i {
+  font-size: 30px;
+  margin-right: 16px;
+  color: #0077b5;
+  width: 35px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: #333;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-column {
+  background-color: #eef1f4;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.contact-column:hover {
+  transform: translateY(-5px);
+}
+
+.contact-column i {
+  font-size: 40px;
+  color: #0077b5;
+  margin-bottom: 12px;
+}
+
+.contact-column a {
+  text-decoration: none;
+  color: #333;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.contact-column a:hover {
+  color: #0077b5;
+  text-decoration: underline;
+}
+
+
+#timeline-horizontal {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f5f7fa;
+}
+
+.timeline-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 20px 0;
+  position: relative;
+  scroll-snap-type: x mandatory;
+}
+
+.timeline-event {
+  flex: 0 0 250px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.timeline-event:hover {
+  transform: scale(1.05);
+}
+
+.timeline-event h4 {
+  color: #0077b5;
+  margin-bottom: 8px;
+}
+
+.timeline-event.current {
+  border: 2px solid #28a745;
+}
+
+.timeline-event.current h4 {
+  color: #28a745;
+  font-weight: bold;
+}
+
+
   </style>
 </head>
 <body>
@@ -290,6 +574,7 @@
     <nav class="main-nav">
     <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#timeline-horizontal">Time Line</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#certificates">Certificates</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -310,8 +595,34 @@
     <p>Since 2022, I’ve also gained hands-on professional experience with <strong>Salesforce CRM</strong>, <strong>Microsoft Office tools</strong>, and developing <strong>VBA automations</strong>.</p>
     <p>I'm always eager to learn, innovate, and deliver value through data-driven solutions. 🚀</p>
   </section>
+  <section id="timeline-horizontal">
+  <h2>Professional Timeline</h2>
+  <div class="timeline-container">
 
-  <section id="projects" data-aos="fade-left">
+    <div class="timeline-event current">
+      <h4>Mar 2025 – Present</h4>
+      <p>Optum<br>Senior Process Executive</p>
+    </div>
+    <div class="timeline-event">
+      <h4>Mar 2024 – Mar 2025</h4>
+      <p>Optum<br>Process Executive</p>
+    </div>
+    <div class="timeline-event">
+      <h4>Feb 2023 – Mar 2024</h4>
+      <p>Optum<br>Process Associate</p>
+    </div>
+    <div class="timeline-event">
+      <h4>Jul 2022 – Feb 2023</h4>
+      <p>Episource<br>Process Associate</p>
+    </div>
+    <div class="timeline-event">
+      <h4>Mar 2019 – Jun 2022</h4>
+      <p>Civil Sector</p>
+    </div>
+  </div>
+</section>
+
+    <section id="projects" data-aos="fade-left">
     
     <h2>Projects</h2>
 
@@ -385,49 +696,53 @@
     <div class="cert-card">
       <h4>Master Data Science – GUVI</h4>
       <p>Full-stack program: Python, ML, Deep Learning, Streamlit, and deployment.</p>
-      <a href="https://www.guvi.in/certificate?id=z0i46870C3612Oj3Yf" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.guvi.in/certificate?id=z0i46870C3612Oj3Yf" target="_blank" class="github-link">
+        <i class="fas fa-file-alt"></i> View Certificate
+        </a>
+
+      </a>
     </div>
 
     <div class="cert-card">
       <h4>Pandas for Data Analysis – GUVI</h4>
       <p>In-depth exploration of the Pandas library for data manipulation.</p>
-      <a href="https://www.guvi.in/verify-certificate?id=92511151B78jKLF8X5" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.guvi.in/verify-certificate?id=92511151B78jKLF8X5" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>Excel for Beginners – Great Learning</h4>
       <p>Basic formulas, data formatting, and charts for starters.</p>
-      <a href="https://www.mygreatlearning.com/certificate/YLRMPNDZ" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.mygreatlearning.com/certificate/YLRMPNDZ" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>Excel Intermediate – Great Learning</h4>
       <p>Pivot tables, advanced features, and data analysis techniques.</p>
-      <a href="https://www.mygreatlearning.com/certificate/XAEIURJO" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.mygreatlearning.com/certificate/XAEIURJO" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>Microsoft Excel - Excel from Beginner to Advanced – Udemy</h4>
       <p>Comprehensive guide to Excel: formulas, functions, dashboards, and power tools.</p>
-      <a href="https://www.udemy.com/certificate/UC-cd1eef3d-83bd-4726-9f92-734d75002c8b/" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.udemy.com/certificate/UC-cd1eef3d-83bd-4726-9f92-734d75002c8b/" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>MS Office - Advanced - Efficiency – Udemy</h4>
       <p>Advanced MS Office techniques for boosting workplace productivity.</p>
-      <a href="https://www.udemy.com/certificate/UC-e8bff8cc-32ae-407d-8f13-e353360b64b1/" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.udemy.com/certificate/UC-e8bff8cc-32ae-407d-8f13-e353360b64b1/" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>Mastering Microsoft Word 365 – Udemy</h4>
       <p>Document automation, collaboration, formatting, and productivity with Word.</p>
-      <a href="https://www.udemy.com/certificate/UC-bb1af16e-2f90-4726-b5cb-5d1d425515ce/" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.udemy.com/certificate/UC-bb1af16e-2f90-4726-b5cb-5d1d425515ce/" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>Quality Management – Great Learning</h4>
       <p>Six Sigma, total quality management, and quality assurance basics.</p>
-      <a href="https://www.mygreatlearning.com/certificate/ZBDIGSQY" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.mygreatlearning.com/certificate/ZBDIGSQY" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
     
   </div>
@@ -438,43 +753,61 @@
     <div class="cert-card">
       <h4>Business Communication Principles – Great Learning</h4>
       <p>Clear, persuasive, and professional workplace communication techniques.</p>
-      <a href="https://www.mygreatlearning.com/certificate/KKXGLCYT" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.mygreatlearning.com/certificate/KKXGLCYT" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>Leadership Skills for Beginners – Great Learning</h4>
       <p>Team building, initiative, and leadership fundamentals for early professionals.</p>
-      <a href="https://www.mygreatlearning.com/certificate/AQYRWEPB" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.mygreatlearning.com/certificate/AQYRWEPB" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>Effective Communication – Great Learning</h4>
       <p>Strategies for collaboration, empathy, and efficient workplace dialogue.</p>
-      <a href="https://www.mygreatlearning.com/certificate/YKIISYOE" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.mygreatlearning.com/certificate/YKIISYOE" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>Team Building - From Forming to High Performing Teams – Udemy</h4>
       <p>Stages of team growth, trust building, conflict resolution, and success strategies.</p>
-      <a href="https://www.udemy.com/certificate/UC-fccd01ad-587f-4973-93ff-0b295022b217/" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.udemy.com/certificate/UC-fccd01ad-587f-4973-93ff-0b295022b217/" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
     <div class="cert-card">
       <h4>Communication Skills: Acquire Effective Communication – Udemy</h4>
       <p>Principles of verbal and nonverbal communication, active listening, and clarity.</p>
-      <a href="https://www.udemy.com/certificate/UC-9d0b0642-f775-4edb-8c1a-4d46bf7c3c8d/" target="_blank" class="github-link">📄 View Certificate</a>
+      <a href="https://www.udemy.com/certificate/UC-9d0b0642-f775-4edb-8c1a-4d46bf7c3c8d/" target="_blank" class="github-link"><i class="fas fa-file-alt"></i> View Certificate</a>
     </div>
 
   </div>
 </section>
 
-    <section id="contact" data-aos="fade-right">
-    <h2>Contact</h2>
-    <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
-    <p>Email: <a href="mailto:yogeshwaran.p1997@gmail.com">yogeshwaran.p1997@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yogeshwaran-purushothaman-b8598a173" target="_blank">linkedin.com/in/YogeshwaranPurushothaman</a></p>
-    <p>GitHub: <a href="https://github.com/YogeshwaranPurushothaman" target="_blank">github.com/YogeshwaranPurushothaman</a></p>
-    </section>
+<section id="contact" data-aos="fade-right">
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    <div class="contact-column">
+      <a href="tel:+919876543210">
+      <i class="fas fa-phone-alt"></i>
+      <p>+91 98765 43210</p></a>
+    </div>
+    <div class="contact-column">
+      <a href="mailto:yogeshwaran.p1997@gmail.com">
+      <i class="fas fa-envelope"></i>
+      <p>yogeshwaran.p1997@gmail.com</p></a>
+    </div>
+    <div class="contact-column">
+      <a href="https://www.linkedin.com/in/yogeshwaran-purushothaman-b8598a173" target="_blank">
+      <i class="fab fa-linkedin"></i>
+      <p>LinkedIn</p></a>
+    </div>
+    <div class="contact-column">
+      <a href="https://github.com/YogeshwaranPurushothaman" target="_blank">
+      <i class="fab fa-github"></i>
+      <p>GitHub</p></a>
+    </div>
+  </div>
+</section>
 
   <footer>
     &copy; 2025 Yogeshwaran P. All rights reserved.
