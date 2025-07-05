@@ -132,50 +132,88 @@
     }
     @media (max-width: 600px) {
     header {
-      padding: 2rem 1rem;
+        padding: 2rem 1rem;
     }
-  
+
     header h1 {
-      font-size: 1.8rem;
-      word-break: break-word;
+        font-size: 1.8rem;
+        word-break: break-word;
     }
-  
+
     .tagline {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  
+
     nav ul {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     nav li {
-      margin: 10px 0;
+        margin: 10px 0;
     }
-  
+
     nav a {
-      padding: 0.8rem;
-      font-size: 1rem;
+        padding: 0.8rem;
+        font-size: 1rem;
     }
-  }
+    }
+    .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    }
+
+    /* Responsive nav for mobile */
+    @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav .nav-links {
+        flex-direction: column;
+        background-color: #2a5298;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 70px;
+        display: none;
+    }
+
+    .main-nav .nav-links li {
+        text-align: center;
+        margin: 0;
+    }
+
+    .main-nav.open .nav-links {
+        display: flex;
+    }
+    }
 
   </style>
 </head>
 <body>
-  <header>
+    <header>
     <h1>Yogeshwaran P</h1>
     <p class="tagline"></p>
-  </header>
+    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#contact">Contact</a></li>
-      
+    <nav class="main-nav">
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+    </nav>
 
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
