@@ -6,6 +6,8 @@
   <title>Yogeshwaran P | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <meta name="theme-color" content="#2a5298" />
   <style>
     body {
@@ -196,24 +198,7 @@
         display: flex;
     }
     }
-    .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    }
 
-    .project-modern {
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project
     .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -272,6 +257,26 @@
     margin-bottom: 6px;
     display: inline-block;
     }
+    .github-btn {
+    display: inline-block;
+    margin-top: 0.8rem;
+    background-color: #2a5298;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .github-btn:hover {
+    background-color: #1e3c72;
+    transform: translateY(-2px);
+    }
+    .github-btn i {
+    margin-right: 8px;
+    }
 
   </style>
 </head>
@@ -315,31 +320,46 @@
         <h3><i class="fas fa-bus"></i> Redbus Scraper & Streamlit</h3>
         <p>Automated travel data extraction and visualization for smarter route insights.</p>
         <div class="tags"><span>Python</span><span>Selenium</span><span>Streamlit</span></div>
+        <a href="https://github.com/YogeshwaranPurushothaman/Redbus_proj" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+        </a>
     </div>
 
     <div class="project-modern" data-aos="fade-up" data-aos-delay="100">
         <h3><i class="fas fa-chart-line"></i> Global EDA Dashboard</h3>
         <p>Analyzed customer/sales datasets to uncover KPIs and improvement strategies.</p>
         <div class="tags"><span>Pandas</span><span>EDA</span><span>Matplotlib</span></div>
-    </div>
+        <a href="https://github.com/YogeshwaranPurushothaman/Data_Spark" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+        </a>
+        </div>
 
     <div class="project-modern" data-aos="fade-up" data-aos-delay="200">
         <h3><i class="fas fa-car"></i> Car Price Predictor</h3>
         <p>Live ML app for estimating used car prices based on key features and trends.</p>
         <div class="tags"><span>Sklearn</span><span>Streamlit</span><span>Regression</span></div>
-    </div>
+        <a href="https://github.com/YogeshwaranPurushothaman/Car_Dekho" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+        </a>
+        </div>
 
     <div class="project-modern" data-aos="fade-up" data-aos-delay="300">
         <h3><i class="fas fa-shield-alt"></i> Cybersecurity Classifier</h3>
         <p>AI-powered classification model to assist SOC analysts with alert triage.</p>
         <div class="tags"><span>Classification</span><span>Microsoft</span><span>Security</span></div>
-    </div>
+        <a href="https://github.com/YogeshwaranPurushothaman/MS-Project" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+        </a>
+        </div>
 
     <div class="project-modern" data-aos="fade-up" data-aos-delay="400">
         <h3><i class="fas fa-pizza-slice"></i> Dominos Sales Optimizer</h3>
         <p>Forecasted sales for ingredient ordering and minimized stock wastage.</p>
         <div class="tags"><span>Forecasting</span><span>Time Series</span><span>Inventory</span></div>
-    </div>
+        <a href="https://github.com/YogeshwaranPurushothaman/Dominos---Predictive-Purchase-Order-System" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+        </a>
+        </div>
 
     <div class="project-modern" data-aos="fade-up" data-aos-delay="500">
         <h3><i class="fas fa-university"></i> Banking Intelligence Suite</h3>
@@ -349,6 +369,9 @@
         <li><strong>Recommender:</strong> Personalized product suggestions.</li>
         </ul>
         <div class="tags"><span>ML</span><span>Clustering</span><span>Recommender</span></div>
+        <a href="https://github.com/YogeshwaranPurushothaman/Banking" class="github-btn" target="_blank">
+        <i class="fab fa-github"></i> View on GitHub
+        </a>
     </div>
     </div>
   </section>
@@ -445,12 +468,13 @@
   </div>
 </section>
 
-  <section id="contact" data-aos="fade-right">
+    <section id="contact" data-aos="fade-right">
     <h2>Contact</h2>
+    <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
     <p>Email: <a href="mailto:yogeshwaran.p1997@gmail.com">yogeshwaran.p1997@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yogeshwaran-purushothaman-b8598a173">linkedin.com/in/YogeshwaranPurushothaman</a></p>
-    <p>GitHub: <a href="https://github.com/YogeshwaranPurushothaman">github.com/YogeshwaranPurushothaman</a></p>
-  </section>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yogeshwaran-purushothaman-b8598a173" target="_blank">linkedin.com/in/YogeshwaranPurushothaman</a></p>
+    <p>GitHub: <a href="https://github.com/YogeshwaranPurushothaman" target="_blank">github.com/YogeshwaranPurushothaman</a></p>
+    </section>
 
   <footer>
     &copy; 2025 Yogeshwaran P. All rights reserved.
