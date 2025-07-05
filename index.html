@@ -196,6 +196,82 @@
         display: flex;
     }
     }
+    .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    }
+
+    .project-modern {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project
+    .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    }
+
+    .project-modern {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-modern:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-modern h3 {
+    font-size: 1.2rem;
+    color: #2a5298;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    }
+
+
+    .project-modern li {
+    color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    }
+
+    .project-modern ul {
+    padding-left: 1.2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    }
+
+    .tags {
+    margin-top: 0.8rem;
+    }
+
+    .tags span {
+    background: #2a5298;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    display: inline-block;
+    }
 
   </style>
 </head>
@@ -225,46 +301,55 @@
       <li><strong>App Development:</strong> Streamlit</li>
       <li><strong>ML & AI:</strong> Machine Learning models, Deep Learning, YOLO object detection, Sentiment Analysis</li>
     </ul>
-    <p>I’ve successfully completed <strong>5 machine learning projects</strong>, ranging from classification models to deep neural networks and computer vision tasks.</p>
+    <p>I’ve successfully completed <strong>6 machine learning projects</strong>, ranging from EDA to classification models and Recommendation engineering and purchase analysis.</p>
     <p>Since 2022, I’ve also gained hands-on professional experience working with <strong>Salesforce CRM</strong>, <strong>MS Office tools</strong>, and developing <strong>VBA automation</strong>.</p>
     <p>I'm always eager to learn, innovate, and bring value through data-driven solutions. 🚀</p>
   </section>
 
   <section id="projects" data-aos="fade-left">
+    
     <h2>Projects</h2>
 
-    <div class="project-card" data-aos="zoom-in">
-      <h3>Redbus Data Scraping & Streamlit App</h3>
-      <p>Automated travel data extraction from Redbus using Selenium and presented it via Streamlit for smarter transportation insights.</p>
+    <div class="projects-grid">
+    <div class="project-modern" data-aos="fade-up">
+        <h3><i class="fas fa-bus"></i> Redbus Scraper & Streamlit</h3>
+        <p>Automated travel data extraction and visualization for smarter route insights.</p>
+        <div class="tags"><span>Python</span><span>Selenium</span><span>Streamlit</span></div>
     </div>
 
-    <div class="project-card" data-aos="zoom-in">
-      <h3>EDA for Global Electronics</h3>
-      <p>Performed deep analysis of customer and sales data to unlock insights and propose actionable business strategies.</p>
+    <div class="project-modern" data-aos="fade-up" data-aos-delay="100">
+        <h3><i class="fas fa-chart-line"></i> Global EDA Dashboard</h3>
+        <p>Analyzed customer/sales datasets to uncover KPIs and improvement strategies.</p>
+        <div class="tags"><span>Pandas</span><span>EDA</span><span>Matplotlib</span></div>
     </div>
 
-    <div class="project-card" data-aos="zoom-in">
-      <h3>Used Car Price Prediction – Car Dheko</h3>
-      <p>Built an ML-powered pricing engine with Streamlit for real-time used car valuations based on critical features.</p>
+    <div class="project-modern" data-aos="fade-up" data-aos-delay="200">
+        <h3><i class="fas fa-car"></i> Car Price Predictor</h3>
+        <p>Live ML app for estimating used car prices based on key features and trends.</p>
+        <div class="tags"><span>Sklearn</span><span>Streamlit</span><span>Regression</span></div>
     </div>
 
-    <div class="project-card" data-aos="zoom-in">
-      <h3>Cybersecurity Triage Classifier – Microsoft</h3>
-      <p>Developed a classification model to streamline security incident triage and boost SOC analyst efficiency.</p>
+    <div class="project-modern" data-aos="fade-up" data-aos-delay="300">
+        <h3><i class="fas fa-shield-alt"></i> Cybersecurity Classifier</h3>
+        <p>AI-powered classification model to assist SOC analysts with alert triage.</p>
+        <div class="tags"><span>Classification</span><span>Microsoft</span><span>Security</span></div>
     </div>
 
-    <div class="project-card" data-aos="zoom-in">
-      <h3>Dominos Sales Forecast & Inventory Optimizer</h3>
-      <p>Forecasted sales using historical data to automate ingredient ordering and reduce inventory waste.</p>
+    <div class="project-modern" data-aos="fade-up" data-aos-delay="400">
+        <h3><i class="fas fa-pizza-slice"></i> Dominos Sales Optimizer</h3>
+        <p>Forecasted sales for ingredient ordering and minimized stock wastage.</p>
+        <div class="tags"><span>Forecasting</span><span>Time Series</span><span>Inventory</span></div>
     </div>
 
-    <div class="project-card" data-aos="zoom-in">
-      <h3>Banking Data Intelligence Suite</h3>
-      <ul>
-        <li><strong>Loan Default Prediction</strong> — Supervised learning to flag high-risk applications.</li>
-        <li><strong>Customer Segmentation</strong> — Cluster-based profiling via unsupervised learning.</li>
-        <li><strong>Product Recommendation</strong> — Personalized suggestions using recommender systems.</li>
-      </ul>
+    <div class="project-modern" data-aos="fade-up" data-aos-delay="500">
+        <h3><i class="fas fa-university"></i> Banking Intelligence Suite</h3>
+        <ul>
+        <li><strong>Loan Prediction:</strong> Flagged risky applicants.</li>
+        <li><strong>Segmentation:</strong> Grouped users by behavior.</li>
+        <li><strong>Recommender:</strong> Personalized product suggestions.</li>
+        </ul>
+        <div class="tags"><span>ML</span><span>Clustering</span><span>Recommender</span></div>
+    </div>
     </div>
   </section>
 
