@@ -22,7 +22,10 @@
     header {
       background: linear-gradient(to right, #1e3c72, #2a5298);
       color: #fff;
-      padding: 3rem 1rem;
+      padding-top: 5rem;
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 1rem;
       text-align: center;
     }
 
@@ -919,6 +922,30 @@
       } else {
         backToTop.style.display = 'none';
       }
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.main-nav .nav-links');
+
+        // Toggle menu
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation(); // Prevent click from bubbling up
+            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close menu on outside click
+        document.addEventListener('click', function (e) {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.style.display = 'none';
+            }
+        });
+
+        // Close menu on scroll
+        window.addEventListener('scroll', function () {
+            navLinks.style.display = 'none';
+        });
     });
   </script>
   <a href="#" class="back-to-top" aria-label="Back to top">
